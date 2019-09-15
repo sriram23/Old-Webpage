@@ -1,0 +1,762 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+
+<head>
+    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <script>
+      (adsbygoogle = window.adsbygoogle || []).push({
+        google_ad_client: "ca-pub-9516102713932949",
+        enable_page_level_ads: true
+      });
+    </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+
+<script type="text/javascript" src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
+    <meta charset="UTF-8">
+    <title>Sriram Balasubramanian</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="js/mail.js"></script>
+    <link rel="stylesheet" href="css/bundle.css">
+	<link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="icon" href="images/mortar.ico" type="image/x-icon"/>
+    <style>
+    html,body {
+	margin: 0;
+	padding: 0;
+}
+.bgimg{
+    background-image: url('images/inspiration.png');
+    max-width: 100%;
+    display:block;
+    height: auto;
+}
+.slider {
+	width: 1024px;
+	margin: 2em auto;
+
+}
+
+.slider-wrapper {
+	width: 100%;
+	height: 400px;
+	position: relative;
+}
+
+.slide {
+	float: left;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	opacity: 0;
+	transition: opacity 3s linear;
+}
+
+.slider-wrapper > .slide:first-child {
+	opacity: 1;
+}
+
+    </style>
+    <script>
+    (function() {
+
+function Slideshow( element ) {
+  this.el = document.querySelector( element );
+  this.init();
+}
+
+Slideshow.prototype = {
+  init: function() {
+    this.wrapper = this.el.querySelector( ".slider-wrapper" );
+    this.slides = this.el.querySelectorAll( ".slide" );
+    this.previous = this.el.querySelector( ".slider-previous" );
+    this.next = this.el.querySelector( ".slider-next" );
+    this.index = 0;
+    this.total = this.slides.length;
+    this.timer = null;
+
+    this.action();
+    this.stopStart();
+  },
+  _slideTo: function( slide ) {
+    var currentSlide = this.slides[slide];
+    currentSlide.style.opacity = 1;
+
+    for( var i = 0; i < this.slides.length; i++ ) {
+      var slide = this.slides[i];
+      if( slide !== currentSlide ) {
+        slide.style.opacity = 0;
+      }
+    }
+  },
+  action: function() {
+    var self = this;
+    self.timer = setInterval(function() {
+      self.index++;
+      if( self.index == self.slides.length ) {
+        self.index = 0;
+      }
+      self._slideTo( self.index );
+
+    }, 6000);
+  },
+  stopStart: function() {
+    var self = this;
+    self.el.addEventListener( "mouseover", function() {
+      clearInterval( self.timer );
+      self.timer = null;
+
+    }, false);
+    self.el.addEventListener( "mouseout", function() {
+      self.action();
+
+    }, false);
+  }
+
+
+};
+
+document.addEventListener( "DOMContentLoaded", function() {
+
+  var slider = new Slideshow( "#main-slider" );
+
+});
+
+
+})();
+
+    </script>
+</head>
+
+<body>
+    <header>
+        <!--Side Menu-->
+        <div id="slide-out" class="side-nav fixed">
+            <div class="bg-color material-box">
+                <div class="photo"><img src="images/sri1.jpg" alt=""></div>
+                <h4><b>Sriram Balasubramanian</b></h4>
+                <h6>Associate Analyst at <i>Ugam</i></h6>
+                <!--Side Menu Link-->
+                <div class="social-media">
+                    <a href="http://facebook.com/imSriramB" target="_blank" class="tooltipped" data-position="bottom" data-delay="50" data-tooltip="Facebook"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                    <a href="http://twitter.com/imSriramB" target="_blank" class="tooltipped" data-position="bottom" data-delay="50" data-tooltip="Twitter"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                    <a href="http://github.com/sriram23" target="_blank" class="tooltipped" data-position="bottom" data-delay="50" data-tooltip="GitHub"><i class="fa fa-github" aria-hidden="true"></i></a>
+                    <a href="http://medium.com/@Sriram23" target="_blank" class="tooltipped" data-position="bottom" data-delay="50" data-tooltip="Medium Blogs"><i class="fa fa-medium" aria-hidden="true"></i></a>
+                    <a href="https://www.instagram.com/the_invincible_geek/" target="_blank" class="tooltipped" data-position="bottom" data-delay="50" data-tooltip="Instagram"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+                    <a href="https://www.linkedin.com/in/sriram-balasubramanian-699252b7/" target="_blank" class="tooltipped" data-position="bottom" data-delay="50" data-tooltip="Linkedin"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+                </div>
+                <!--Side Menu Link End-->
+            </div>
+            <!--Menu-->
+            <ul class="center-align menu">
+                <li id="li1" class=""><a href="#about" class="waves-effect waves-color">About Me</a></li>
+                <li id="li2" class=""><a href="#work-skills" class="waves-effect waves-color">Work Skills</a></li>
+                <li id="li3" class=""><a href="#education" class="waves-effect waves-color">Education</a></li>
+                <li id="li5" class=""><a href="#myWorks" class="waves-effect waves-color">My Works</a></li>
+                <li id="li6" class=""><a href="#blog" class="waves-effect waves-color">My Blogs</a></li>
+                <li id="li7" class=""><a href="#sld" class="waves-effect waves-color">My Inspiration</a></li>
+                <li id="li8" class=""><a href="#contact" class="waves-effect waves-color">Contact</a></li>
+            </ul>
+            <!--Menu End-->
+        </div>
+        <!--Side Menu End-->
+        <!--Mobile Menu Button-->
+        <div class="fixed-action-btn">
+            <a href="#" data-activates="slide-out" class="button-collapse btn-floating btn-large bg-color">
+                <i class="fa fa-bars" aria-hidden="true"></i>
+            </a>
+        </div>
+    </header>
+    <main>
+        <div class="container">
+            <!--About-->
+		<div class="card-panel about" id="about"><div class="row">
+		<div class="col-md-8 col-sm-8 col-xs-6">
+<p src="http://api.openweathermap.org/data/2.5/weather?q=Coimbatore&units=imperial&appid=7727eb7a7ad3adf1d307938860eca01b"></p>
+
+</div>                    
+		<div class="col-md-3 col-sm-3 col-xs-6">
+			<iframe src="https://freesecure.timeanddate.com/clock/i6g6yi1f/n438/fn6/ftb/tt0/tw1/tm1/ta1" frameborder="0" width="312" height="19"></iframe></div></div>
+
+		</div>
+            <div class="card-panel about" id="about">
+                <div class="row">
+                    <div class="col-md-6 col-sm-6 col-xs-12 about-image">
+                        <!--Photo-->
+                        <img src="images/sri2.jpg" class="responsive-img" alt="">
+                    </div>
+                    <!--About Content-->
+                    <div class="col-md-6 col-sm-6 col-xs-12">
+                        <h2 class="text-color">Hello</h2>
+                        <h1 class="head-text">I'm <b>Sriram</b></h1>
+                        <i>Tech Enthusiast | Code Addict | FOSS Contributor | Mozillian | Engineering Student | Open Source Evangelist</i>
+                        <li><p>Working as <b>Associate Analyst</b> at <i><a href="http://ugamsolutions.com" target="_blank">Ugam</a></i>, CHIL SEZ, Coimbatore.</p>
+                        <li><p>Technical Mentor at <a href="https://zen.coderdojo.com/">CoderDojo</a></p></li>
+                        <li><p>Contributor at <a href="https://mozillatn.github.io/">MozillaTN</a></p></li>
+                        <li><p>Former Intern at <a href="https://www.kgfsl.com/">KGFSL</a>, Coimbatore.
+                        <li><p>Former Intern at Google Device Lab(<a href="http://thegeeksevent.in/">The Geeks Event</a>), Bangalore.</p>
+                        <li><p>Completed Bachelor degree specialized in <b>Computer Science and Engineering</b> at <i><a href="http://www.kgkite.ac.in" target="_blank">KGiSL Institute of Technology</a></i>, Coimbatore.</p>
+                        <div class="center-align buttons">
+                            <form action="resume.pdf" method="get" target="_blank"> <a href="resume.pdf" class="btn btn-large bg-color waves-effect"><input type="submit" value="Resume"></input></a></form>
+                            <a href="mailto:sriramsubramanian23@gmail.com" class="bg-color-darken btn btn-large waves-effect">Contact Me</a></form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--About End-->
+            <!--Work Skills-->
+            <!-- SCRIPT FOR COLOR CHANGE -->
+            <script>
+                function change(x){
+                    x.style.color = "#ffffff";
+                    x.style.backgroundColor = '#25a2ee';
+                }
+                function back(x){
+                    x.style.color = "#000000";
+                    x.style.backgroundColor = '#ffffff';
+                }
+            </script>
+            <div class="work-skills" id="work-skills">
+                <h3>Skills</h3>
+                <div class="card-panel">
+                     <div class="row" border="100%">
+                        <!--<div class="col-md-12 col-sm-12 col-xs-12">                       
+							<p class="center-align" onmouseover="change(this)" onmouseout="back(this)"> PROGRAMMING AND PROBLEM SOLVING </p>
+                        </div>
+                        <div class="col-md-12 col-sm-12 col-xs-12">                       
+                            <p class="center-align" onmouseover="change(this)" onmouseout="back(this)"> WEB DESIGNING (BOOTSTRAP) </p>
+                        </div>
+                        <div class="col-md-12 col-sm-12 col-xs-12">                       
+                            <p class="center-align" onmouseover="change(this)" onmouseout="back(this)">  ANDROID APPLICATION DEVELOPMENT </p>
+                        </div>
+                        <div class="col-md-12 col-sm-12 col-xs-12">                       
+                            <p class="center-align" onmouseover="change(this)" onmouseout="back(this)"> ROBOTIC PROCESS AUTOMATION (UiPATH) </p>
+                        </div>-->
+                        <div class="col-md-2 col-sm-4 col-xs-6">
+                        <div class="interest text-color"><i class="fa fa-android tooltipped" aria-hidden="true" data-position="top" data-delay="50" data-tooltip="Android Application Development"></i></div>
+                        </div>
+
+                        <div class="col-md-2 col-sm-4 col-xs-6">
+                        <div class="interest text-color"><i class="fa fa-microsoft tooltipped" aria-hidden="true" data-position="top" data-delay="50" data-tooltip="Excel"></i></div>
+                        </div>
+
+                        <div class="col-md-2 col-sm-4 col-xs-6">
+                        <div class="interest text-color"><i class="fa fa-github tooltipped" aria-hidden="true" data-position="top" data-delay="50" data-tooltip="Git"></i></div>
+                        </div>
+
+                        <div class="col-md-2 col-sm-4 col-xs-6">
+                        <div class="interest text-color"><i class="fa fa-html5 tooltipped" aria-hidden="true" data-position="top" data-delay="50" data-tooltip="HTML"></i></div>
+                        </div>
+
+                        <div class="col-md-2 col-sm-4 col-xs-6">
+                        <div class="interest text-color"><i class="fa fa-css3 tooltipped" aria-hidden="true" data-position="top" data-delay="50" data-tooltip="CSS"></i></div>
+                        </div>
+
+                        <div class="col-md-2 col-sm-4 col-xs-6">
+                        <div class="interest text-color"><i class="fa fa-js tooltipped" aria-hidden="true" data-position="top" data-delay="50" data-tooltip="JS"></i></div>
+                        </div>
+
+                    </div>
+                     
+                </div>
+            </div>
+
+                        <!-- Add Pagination -->
+                        <div class="swiper-pagination"></div>
+                    </div>
+                </div>
+            </div>
+            <!--Work Expreince-->
+            <!--Education-->
+            <div class="education" id="education">
+                <h3>Education</h3>
+                <div class="card-panel">
+                    <div class="btn bg-color">2014 - 2018</div>
+                    <h4>KGiSL Institute of Technology</h4>
+                    <p class="text-color">Bachelor of Engineering in Computer Science and Engineering</p>
+
+                    <div class="btn bg-color">2000 - 2014</div>
+                    <h4>Sri Ramakrishna Matric Higher Secondary School</h4>
+                    <p class="text-color">SSLC and Higher Secondary</p>
+                </div>
+            </div>
+            <!--Education End-->
+            <!--Interest-->
+            <h3>My Interest</h3>
+            <div class="card-panel padding-re">
+                <div class="row">
+                  <!--  <div class="col-md-2 col-sm-4 col-xs-6">
+                        <div class="interest text-color"><i class="fa fa-plane" aria-hidden="true"></i></div>
+                    </div> -->
+                    <div class="col-md-2 col-sm-4 col-xs-6">
+                        <div class="interest text-color"><i class="fa fa-motorcycle tooltipped" aria-hidden="true" data-position="top" data-delay="50" data-tooltip="Bike Riding"></i></div>
+                    </div>
+                    <div class="col-md-2 col-sm-4 col-xs-6">
+                        <div class="interest text-color"><i class="fa fa-music tooltipped" aria-hidden="true" data-position="top" data-delay="50" data-tooltip="Music"></i></div>
+                    </div>
+                    <div class="col-md-2 col-sm-4 col-xs-6">
+                        <div class="interest text-color"><i class="fa fa-laptop tooltipped" aria-hidden="true" data-position="top" data-delay="50" data-tooltip="Computer"></i></div>
+                    </div>
+                    <div class="col-md-2 col-sm-4 col-xs-6">
+                        <div class="interest text-color"><i class="fa fa-coffee tooltipped" aria-hidden="true" data-position="top" data-delay="50" data-tooltip="Coffee"></i></div>
+                    </div>
+                    <div class="col-md-2 col-sm-4 col-xs-6">
+                        <div class="interest text-color"><i class="fa fa-code tooltipped" aria-hidden="true" data-position="top" data-delay="50" data-tooltip="Coding"></i></div>
+                    </div>
+                </div>
+            </div>
+            <!--Interest End-->
+            <!--Portfolio-->
+            <!-- <div class="portfolio" id="portfolio">
+                <h3>Gallery</h3>
+                <div class="card-panel"> -->
+                    <!--Portfolio Menu-->
+                    <!-- <ul class="tabs">
+                        <li class="tab"><a class="waves-effect waves-color">Mozilla</a></li>
+                        <li class="tab"><a class="waves-effect waves-color">CoderDojo</a></li>
+                        <li class="tab"><a class="waves-effect waves-color">Out Of Box - GDG</a></li>
+                        <li class="tab"><a class="waves-effect waves-color">GDD India -2017</a></li>
+                        <li class="tab"><a class="waves-effect waves-color">Other</a></li> -->
+                        <!--<li class="tab"><a class="waves-effect waves-color">PHP</a></li>-->
+                    <!-- </ul> -->
+                    <!--Portfolio Menu End-->
+                    <!--Portfolio Content-->
+                    <!-- <div class="portfolio-container">
+                        <div class="portfolio-content">
+                            <div class="row">
+                                <div class="col-md-6 col-sm-6">
+                                    <img alt="" src="images/Mozilla/moz.png" class="materialboxed">
+                                </div>
+                                <div class="col-md-6 col-sm-6">
+                                    <img alt="" src="images/Mozilla/kiteMoz.jpg" class="materialboxed">
+                                </div>
+                                <div class="col-md-6 col-sm-6">
+                                    <img alt="" src="images/Mozilla/mozilla.jpg" class="materialboxed">
+                                </div>
+                                <div class="col-md-6 col-sm-6">
+                                    <img alt="" src="images/Mozilla/nightly.jpg" class="materialboxed">
+                                </div>
+                                <div class="col-md-6 col-sm-6">
+                                    <img alt="" src="images/Mozilla/q1.jpg" class="materialboxed">
+                                </div>
+                                <div class="col-md-6 col-sm-6">
+                                    <img alt="" src="images/Mozilla/q2.jpg" class="materialboxed">
+                                </div>
+                                <div class="col-md-6 col-sm-6">
+                                    <img alt="" src="images/Mozilla/q3.jpg" class="materialboxed">
+                                </div>
+                                <div class="col-md-6 col-sm-6">
+                                    <img alt="" src="images/Mozilla/q4.jpg" class="materialboxed">
+                                </div>
+                                <div class="col-md-6 col-sm-6">
+                                    <img alt="" src="images/Mozilla/q5.jpg" class="materialboxed">
+                                </div>
+                                <div class="col-md-6 col-sm-6">
+                                    <img alt="" src="images/Mozilla/rust-logo.png" class="materialboxed">
+                                </div>
+                                <div class="col-md-6 col-sm-6">
+                                    <img alt="" src="images/Mozilla/S1.png" class="materialboxed">
+                                </div>
+                                <div class="col-md-6 col-sm-6">
+                                    <img alt="" src="images/Mozilla/S2.png" class="materialboxed">
+                                </div>
+                                <div class="col-md-6 col-sm-6">
+                                    <img alt="" src="images/Mozilla/2.jpg" class="materialboxed">
+                                </div>
+                                <div class="col-md-6 col-sm-6">
+                                    <img alt="" src="images/Mozilla/3.jpg" class="materialboxed">
+                                </div>
+                                <div class="col-md-6 col-sm-6">
+                                    <img alt="" src="images/Mozilla/S3.png" class="materialboxed">
+                                </div>
+                                <div class="col-md-6 col-sm-6">
+                                    <img alt="" src="images/Mozilla/S4.png" class="materialboxed">
+                                </div>
+                                <div class="col-md-6 col-sm-6">
+                                    <img alt="" src="images/Mozilla/S5.png" class="materialboxed">
+                                </div>
+                            </div>
+                        </div>
+                        
+                    </div>
+                    <div class="portfolio-container">
+                        <div class="portfolio-content">
+                            <div class="row">
+                                <div class="col-md-6 col-sm-6">
+                                    <img alt="" src="images/CoderDojo/CoderDojoMain.png" class="materialboxed">
+                                </div>
+                                <div class="col-md-6 col-sm-6">
+                                    <img alt="" src="images/CoderDojo/logodojo.png" class="materialboxed">
+                                </div>
+                                <div class="col-md-6 col-sm-6">
+                                    <img alt="" src="images/CoderDojo/1.jpg" class="materialboxed">
+                                </div>
+                                <div class="col-md-6 col-sm-6">
+                                    <img alt="" src="images/CoderDojo/4.jpg" class="materialboxed">
+                                </div>
+                                <div class="col-md-6 col-sm-6">
+                                    <img alt="" src="images/CoderDojo/5.jpg" class="materialboxed">
+                                </div>
+                                <div class="col-md-6 col-sm-6">
+                                    <img alt="" src="images/CoderDojo/6.jpg" class="materialboxed">
+                                </div>
+                                <div class="col-md-6 col-sm-6">
+                                    <img alt="" src="images/CoderDojo/7.jpg" class="materialboxed">
+                                </div>
+                                <div class="col-md-6 col-sm-6">
+                                    <img alt="" src="images/CoderDojo/8.jpg" class="materialboxed">
+                                </div>
+                            </div>
+                        </div>
+                        
+                    </div>
+                    <div class="portfolio-container">
+                        <div class="portfolio-content">
+                            <div class="row">
+                                <div class="col-md-6 col-sm-6">
+                                    <img alt="" src="images/OutOfBox/g1.jpg" class="materialboxed">
+                                </div>
+                                <div class="col-md-6 col-sm-6">
+                                    <img alt="" src="images/OutOfBox/g2.jpg" class="materialboxed">
+                                </div>
+                                <div class="col-md-6 col-sm-6">
+                                    <img alt="" src="images/OutOfBox/g3.jpg" class="materialboxed">
+                                </div>
+                                <div class="col-md-6 col-sm-6">
+                                    <img alt="" src="images/OutOfBox/g4.jpg" class="materialboxed">
+                                </div>
+                                <div class="col-md-6 col-sm-6">
+                                    <img alt="" src="images/OutOfBox/g5.jpg" class="materialboxed">
+                                </div>
+                                <div class="col-md-6 col-sm-6">
+                                    <img alt="" src="images/OutOfBox/g6.jpg" class="materialboxed">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="portfolio-container">
+                        <div class="portfolio-content">
+                            <div class="row">
+                                <div class="col-md-6 col-sm-6">
+                                    <img alt="" src="images/GDD-17/1.jpg" class="materialboxed">
+                                </div>
+                                <div class="col-md-6 col-sm-6">
+                                    <img alt="" src="images/GDD-17/2.jpg" class="materialboxed">
+                                </div>
+                                <div class="col-md-6 col-sm-6">
+                                    <img alt="" src="images/GDD-17/3.jpg" class="materialboxed">
+                                </div>
+                                <div class="col-md-6 col-sm-6">
+                                    <img alt="" src="images/GDD-17/4.jpg" class="materialboxed">
+                                </div>
+                                <div class="col-md-6 col-sm-6">
+                                    <img alt="" src="images/GDD-17/5.jpg" class="materialboxed">
+                                </div>
+                                <div class="col-md-6 col-sm-6">
+                                    <img alt="" src="images/GDD-17/6.jpg" class="materialboxed">
+                                </div>
+                                <div class="col-md-6 col-sm-6">
+                                    <img alt="" src="images/GDD-17/7.jpg" class="materialboxed">
+                                </div>
+                                <div class="col-md-6 col-sm-6">
+                                    <img alt="" src="images/GDD-17/8.jpg" class="materialboxed">
+                                </div>
+                                <div class="col-md-6 col-sm-6">
+                                    <img alt="" src="images/GDD-17/9.jpg" class="materialboxed">
+                                </div>
+                                <div class="col-md-6 col-sm-6">
+                                    <img alt="" src="images/GDD-17/10.jpg" class="materialboxed">
+                                </div>
+                                <div class="col-md-6 col-sm-6">
+                                    <img alt="" src="images/GDD-17/11.jpg" class="materialboxed">
+                                </div>
+                                <div class="col-md-6 col-sm-6">
+                                    <img alt="" src="images/GDD-17/12.jpg" class="materialboxed">
+                                </div>
+                                <div class="col-md-6 col-sm-6">
+                                    <img alt="" src="images/GDD-17/13.jpg" class="materialboxed">
+                                </div>
+                                <div class="col-md-6 col-sm-6">
+                                    <img alt="" src="images/GDD-17/14.jpg" class="materialboxed">
+                                </div>
+                                <div class="col-md-6 col-sm-6">
+                                    <img alt="" src="images/GDD-17/15.jpg" class="materialboxed">
+                                </div>
+                                <div class="col-md-6 col-sm-6">
+                                    <img alt="" src="images/GDD-17/16.jpg" class="materialboxed">
+                                </div>
+                            </div>
+                        </div>
+                        
+                    </div>
+                    <div class="portfolio-container">
+                        <div class="portfolio-content">
+                            <div class="row">
+                                <div class="col-md-6 col-sm-6">
+                                    <img alt="" src="images/Other/g7.jpg" class="materialboxed">
+                                </div>
+                                <div class="col-md-6 col-sm-6">
+                                    <img alt="" src="images/Other/g8.jpg" class="materialboxed">
+                                </div>
+                                <div class="col-md-6 col-sm-6">
+                                    <img alt="" src="images/Other/g9.jpg" class="materialboxed">
+                                </div>
+                                <div class="col-md-6 col-sm-6">
+                                    <img alt="" src="images/Other/m1.png" class="materialboxed">
+                                </div>
+                                <div class="col-md-6 col-sm-6">
+                                    <img alt="" src="images/Other/m2.png" class="materialboxed">
+                                </div>
+                                <div class="col-md-6 col-sm-6">
+                                    <img alt="" src="images/Other/ai1.jpg" class="materialboxed">
+                                </div>
+                            </div>
+                        </div>
+                        
+                    </div>
+                    <!--Portfolio Content End
+                </div>
+            </div> -->
+            <!--Portfolio End-->
+
+            <!--Start of My Works-->
+            <div class="education" id="myWorks">
+                <h3>MY WORKS</h3>
+                <div class="card-panel">
+                      <h4>Raspberry Pi</h4>
+                      <p>Tried to create a video on how to assemble a Raspberry Pi kit.</p>
+                      <blockquote class="embedly-card"><h4><a href="https://www.youtube.com/watch?v=_3Urnwrdo6w">How to assemble Kano kit</a></h4><p>This video shows you how to assemble a Kano Raspberry pi kit</p></blockquote>
+                      <script async src="//cdn.embedly.com/widgets/platform.js" charset="UTF-8"></script>
+
+                      <h4>Google Signout</h4>
+                      <p>Created a Firefox browser Extension called <a href="https://addons.mozilla.org/en-US/firefox/addon/google-signout/?src=userprofile"><i>Google Signout</i></a>, that signs out all the google accounts logged in the browser.
+                      
+                      <blockquote class="embedly-card"><h4><a href="https://addons.mozilla.org/en-US/firefox/addon/google-signout/?src=userprofile">GOOGLE SIGNOUT - Add-ons for Firefox</a></h4><p>This will sign out all google accounts from the browser, just in one click</p></blockquote>
+                      <script async src="//cdn.embedly.com/widgets/platform.js" charset="UTF-8"></script>
+
+                      <h4>Search Selection</h4>
+                      <p>Created a Firefox browser Extension called <a href="https://addons.mozilla.org/en-US/firefox/addon/search-selection/"><i>Search Selection</i></a>, that enables us to search selected text in popular search engines</p>
+
+                      <blockquote class="embedly-card"><h4><a href="https://addons.mozilla.org/en-US/firefox/addon/search-selection/?src=userprofile">Search Selection - Add-ons for Firefox</a></h4><p>The addon will search for selected word in popular search engines. Select the text right click -> Search Selection -> Preferred Website to get your result.</p></blockquote>
+                      <script async src="//cdn.embedly.com/widgets/platform.js" charset="UTF-8"></script>
+                      <h4>MD5 Hash Generator (Android)</h4>
+                      <p>Created an Android application, that generates MD5 hash for the given string.</p><a href="md5V1.apk"><button type="button" class="btn btn-large bg-color waves-effect">Download MD5 HASH Generator</button></a>
+
+					  <h4>Tamizh Visai (Web)</h4>
+					  <p>Created a simple <a href="sriram23.github.io/Visai"><i>Tamil Keyboard</i></a> using Bootstrap and Java Script</p>
+
+					  <blockquote class="embedly-card"><h4><a href="https://sriram23.github.io/Visai/">null</a></h4><p>null</p></blockquote>
+					  <script async src="//cdn.embedly.com/widgets/platform.js" charset="UTF-8"></script>
+                      <!--<iframe src="https://sriram23.github.io/Visai">Can't Show right now!!</iframe>-->
+                      
+                      <h4>Tamizh Visai (Android)</h4>
+                      <p>A simple Android Tamil Keyboard Application.</p><a href="tamizh_visai_v1_debug.apk"><button type="button" class="btn btn-large bg-color waves-effect">Download Tamizh Visai</button></a>
+
+                      <h4>Weather Now</h4>
+
+                      <blockquote class="embedly-card"><h4><a href="https://sriram23.github.io/Weather-Now/">Weather Now</a></h4><p>null</p></blockquote>
+                      <script async src="//cdn.embedly.com/widgets/platform.js" charset="UTF-8"></script>
+
+
+                </div>
+            </div>
+            <!--End of my Works-->
+
+            <!-- Blog section - Start -->
+            <div class="education" id="blog">
+                <h3>Blogs</h3>
+                <div class="card-panel">
+                    <!-- <iframe src="https://medium.com/@Sriram23">
+                        <p>Your browser does not support iframes.</p>
+                    </iframe> -->
+                    <!-- My Profile--> 
+                    <blockquote class="embedly-card"><h4><a href="https://medium.com/@Sriram23">Sriram - Medium</a></h4><p>Read writing from Sriram on Medium. Engineering Student | Open Source Evangelist | Mozillian | CoderDojo Mentor. Every day, Sriram and thousands of other voices read, write, and share important stories on Medium.</p></blockquote>
+                    <script async src="//cdn.embedly.com/widgets/platform.js" charset="UTF-8"></script>
+
+                    <!-- TDD With CyberDojo -->
+                    <blockquote class="embedly-card"><h4><a href="https://medium.com/@Sriram23/tdd-with-cyber-dojo-1a1ce2324730">TDD with Cyber-Dojo - Sriram - Medium</a></h4><p>Hello World! TDD which is the abbreviation of Test Driven Development , is a software development process, that relies on th e Code and Test Case. It has a sequence Developer tries to write a code Tester tries to write a valid test case, that makes the code to fail.</p></blockquote>
+                    <script async src="//cdn.embedly.com/widgets/platform.js" charset="UTF-8"></script>
+
+                    <!-- RPA With UiPATH -->
+                    <blockquote class="embedly-card"><h4><a href="https://medium.com/@Sriram23/robotic-process-automation-rpa-with-uipath-2c7dec4d1468">Robotic Process Automation (RPA) with UiPATH - Sriram - Medium</a></h4><p>Hello World! Robotic Processing Automation known as RPA is an emerging technology, that automates a process in computer using Software Robots. Robot is a term that refers to a software or application that replicates the action of user and communicate with the system user interface.</p></blockquote>
+                    <script async src="//cdn.embedly.com/widgets/platform.js" charset="UTF-8"></script>
+                    
+                    <!-- RUST LANGUAGE -->
+                    <blockquote class="embedly-card"><h4><a href="https://medium.com/@Sriram23/the-rust-language-7e0cdc4fb293">The RUST Language - Sriram - Medium</a></h4><p>Hello World! Rust is a system programming language with the goals Safety, Speed and Concurrency. Rust is good in embedding with other languages. It has a number of compile time safety checks that eliminates the data races. How to install? For and , open the terminal and enter the following command.</p></blockquote>
+                    <script async src="//cdn.embedly.com/widgets/platform.js" charset="UTF-8"></script>
+                    
+                    <!-- Embedding Site in another site -->
+                    <blockquote class="embedly-card"><h4><a href="https://medium.com/@Sriram23/how-to-embed-medium-blogs-in-websites-e7f70feec920">How to Embed Medium blogs in websites? - Sriram - Medium</a></h4><p>Hello World! I tried to create a website for myself. It is a simple web page built using HTML, CSS and some frameworks like Bootstrap, Materialize, Font Awesome, etc. When I tried to embed my medium blogs using tags, it showed a blank space. The code that I wrote was Your browser does not support iframes.</p></blockquote>
+                    <script async src="//cdn.embedly.com/widgets/platform.js" charset="UTF-8"></script>
+                    
+                    <!-- Speak Python-->
+                    <blockquote class="embedly-card"><h4><a href="https://medium.com/@Sriram23/speaking-python-program-481996a2d1d">Speaking Python Program - Sriram - Medium</a></h4><p>Hello World! I tried to make python to speak the words, that I type in my output console. How is it possible? With the espeak command that can be used in Linux Operating system. How to do it? We require a Linux/Unix operating system. First we need to install the espeak command.</p></blockquote>
+                    <script async src="//cdn.embedly.com/widgets/platform.js" charset="UTF-8"></script>
+
+                    <!-- Quantum Sprint -->
+                    <blockquote class="embedly-card"><h4><a href="https://medium.com/@Sriram23/firefox-quantum-sprint-oct-8th-2017-9da923a281f9">Firefox Quantum Sprint - Oct 8th, 2017 - Sriram - Medium</a></h4><p>The Firefox Quantum Sprint took place on 8th October 2017 at Prozone Mall, Coimbatore. On the evening of 8th October2017, Mozillians from Coimbatore gathered at Prozone Mall, Coimbatore, to test the Web compatibility of Firefox Quantum Beta 57. Me along with my friends Aravind Arul, Vignesh Kumar, Akksaya Rajasri participated in the sprint and represented KGISL Mozilla Campus Club.</p></blockquote>
+                    <script async src="//cdn.embedly.com/widgets/platform.js" charset="UTF-8"></script>
+
+                    <!-- Tamil Python -->
+                    <blockquote class="embedly-card"><h4><a href="https://medium.com/@Sriram23/tamil-in-python-609ee288672">Tamil in Python - Sriram - Medium</a></h4><p>Hello World! Playing with python has become my hobby nowadays. Being a Tamil enthusiast, I tried to print some Tamil text in python. Thirukkural is a Tamil Literature that consists of 1330 couplets, that deals with everyday virtues of an individual. It was authored by Thiruvalluvar , who lived in 300 BCE, at Thiruvallikeni (Currently in Chennai,India).</p></blockquote>
+                    <script async src="//cdn.embedly.com/widgets/platform.js" charset="UTF-8"></script>
+
+                    <!-- World Wind -->
+                    <blockquote class="embedly-card"><h4><a href="https://medium.com/@Sriram23/nasa-web-world-wind-214670b2fac0">NASA Web World Wind - Sriram - Medium</a></h4><p>Web World Wind is a 3D virtual globe API for HTML5 and JavaScript. By including the web world wind in web pages, we can create one or more virtual globes. We used the Web World Wind API for creating...</p></blockquote>
+                    <script async src="//cdn.embedly.com/widgets/platform.js" charset="UTF-8"></script>
+
+                    <!-- Firebase Hosting -->
+                    <blockquote class="embedly-card"><h4><a href="https://medium.com/@Sriram23/how-to-your-webpage-in-firebase-666fed4fc129">How to host your webpage in Firebase? - Sriram - Medium</a></h4><p>Hello Friends, I went for an event called " Open Web Challenge" conducted by THE GEEKS EVENT . I would like to share what I have learned there. To start with, first check whether npm is installed in your computer. To check, just type the below command in your terminal Window.</p></blockquote>
+                    <script async src="//cdn.embedly.com/widgets/platform.js" charset="UTF-8"></script>
+
+                    <!-- CoderDojo Coimbatore - An Intro --> 
+                    <blockquote class="embedly-card"><h4><a href="https://medium.com/coderdojo-coimbatore/coderdojo-f71dfe0c6c4">CoderDojo - CoderDojo Coimbatore - Medium</a></h4><p>Past: CoderDojo is a global movement which was originally founded by James Whelton and Bill Liao. It all started in James Whelton's school in early 2011 when James (then 18 year-old coder) received some publicity after hacking the iPod Nano and as a result some younger students expressed an interest in learning how to code.</p></blockquote>
+                    <script async src="//cdn.embedly.com/widgets/platform.js" charset="UTF-8"></script>
+                </div>
+            </div>
+            <!-- End of Blog Section -->
+<!-- Slider Starts-->
+<!-- Tweets Starts -->
+    <!-- Blog section - Start -->
+            <div class="education" id="blog">
+                <h3>Tweets</h3>
+                <div class="card-panel">
+                    <a class="twitter-timeline" href="https://twitter.com/imSriramB?ref_src=twsrc%5Etfw">Tweets by imSriramB</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> 
+                </div>
+            </div>
+<style>
+span{
+  color: #ffffff;
+  font-size: 20px;
+}
+</style>
+<div id="sld">
+<div class="card-panel">
+<div class="slider bgimg" id="main-slider"><!-- outermost container element -->
+	<div class="slider-wrapper"><!-- innermost wrapper element -->
+  <div class="row"><div class="col-md-12">
+		<strong><span class="slide">Again, you can’t connect the dots looking forward; you can only connect them looking backward. So you have to trust that the dots will somehow connect in your future. You have to trust in something — your gut, destiny, life, karma, whatever. This approach has never let me down, and it has made all the difference in my life.<br><br> <i><b>- STEVE JOBS, Founder Apple Inc.</b></i></span><!-- slides -->
+		<span class="slide">Man needs his difficulties because they are necessary to enjoy success.<br><br><i><b> - Dr. APJ ABDUL KALAM, Former Indian President </b></i></span>
+    <span class="slide">தேடிச் சோறுநிதம் தின்று <br>
+பல சின்னஞ்சிறு கதைகள் பேசி <br>
+மனம் வாடித் துன்பமிக உழன்று <br>
+பிறர் வாட பலசெயல்கள் செய்து <br>
+நரை கூடி கிழப்பருவ மெய்தி <br>
+கொடும் கூற்றுக் கிரையெனப்பின் மாயும் <br>
+பல வேடிக்கை மனிதரை போலே <br>
+நான் வீழ்வேனென்று நினைத் தாயோ? <br><br>
+<i><b> - பாரதியார், Freedom Fighter, India </b></i></span>
+<span class="slide">    தோன்றின் புகழொடு தோன்றுக அஃதிலார்<br>
+
+    தோன்றலின் தோன்றாமை நன்று.<br>
+
+    <br><i><b> - திருவள்ளுவர் (குறள் — 0236) </b></i></span>
+</strong>
+  </div>
+</div></div>
+</div>
+</div>
+</div>
+<!-- Slider Ends-->
+            <!-- Contact -->
+            <div class="contact" id="contact">
+                <h3>Contact</h3>
+                <div class="card-panel row">
+                    <!--Google Map-->
+                    <div class="col-md-6 padding-left-reset">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3333.947024789794!2d76.93538114987255!3d11.10638169205932!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba8f68b85f45a05%3A0x7d8890a87c737b4e!2sKumaran+Mills+Bus+Stop!5e1!3m2!1sen!2sin!4v1493274637154"></iframe></div>
+                    <div class="col-md-6">
+                        <!--Adress-->
+                        <div class="row">
+                            <div class="col s2"><i class="fa fa-map-marker" aria-hidden="true"></i></div>
+                            <div class="col s10">
+                                <h5>Address</h5>
+                                <p>2/233, Kumarapuram,<br> NSN Palayam[post],<br>Coimbatore - 641031, <br>Tamil Nadu,<br>India</p>
+                            </div>
+                            <div class="col s2"><i class="fa fa-envelope" aria-hidden="true"></i></div>
+                            <div class="col s10">
+                                <h5>Email</h5>
+                                <a href="mailto:sriramsubramanian23@gmail.com"><p>sriramsubramanian23@gmail.com</p></a>
+                            </div>
+                            <div class="col s2"><i class="fa fa-phone" aria-hidden="true"></i></div>
+                            <div class="col s10">
+                                <h5>Phone</h5>
+                                <p>+91 80983 95725</p>
+                            </div>
+                        </div>
+                    </div>
+            <!-- Contact End -->
+        </div>
+      <!--   <div class="contact" id="contact">
+            <h3>AD</h3>
+            <div class="card-panel row">
+                <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<script>
+  (adsbygoogle = window.adsbygoogle || []).push({
+    google_ad_client: "ca-pub-9516102713932949",
+    enable_page_level_ads: true
+  });
+</script>
+                </div>
+    </div> -->
+    </main>
+     <!-- EMAIL --><!--
+             <div class="contact" id="contact">
+                <h3>Contact</h3>
+                <div class="card-panel row">
+            <form method="post" action="Script/mail.php" id="contactfrm" role="form">
+                    <div class="col-sm-3"></div>
+                    <div class="col-sm-4">
+                        <div class="form-group">
+                            <label for="name">Name</label>
+                            <input type="text" class="form-control" name="name" id="name" placeholder="Enter name" title="Please enter your name (at least 2 characters)">
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" class="form-control" name="email" id="email" placeholder="Enter email" title="Please enter a valid email address">
+                        </div>
+                    </div>
+                    <div class="col-sm-4">
+                        <div class="form-group">
+                            <label for="comments">Message</label>
+                            <textarea name="comment" class="form-control materialize-textarea" id="message1" cols="3" rows="5" placeholder="Enter your message…" title="Please enter your message (at least 10 characters)"></textarea>
+                        </div>
+                    </div>
+                    <div class="col-sm-4">
+                        <!-- <button name="submit" type="submit" class="btn waves-effect waves-light" id="submit">Submit<i class="material-icons right">send</i></button> ->
+                        <button id="sendBtn" class="btn waves-effect waves-light" type="submit" name="action">
+<i class="material-icons">send</i></button>
+                        <div class="result"></div>
+                    </div>
+                </form>
+            </div>
+        </div> -->
+                <!-- EMAIL END -->
+    <!--Footer-->
+    <footer class="page-footer">
+        <div class="footer-copyright">
+            <div class="container">
+                <!--Copryght Text-->
+                Built and Maintained by <a href="http://twitter.com/imSriramB">Sriram</a> <div class="fa  fa-copyright">&nbsp; | &nbsp;</div>
+                <!--Social Media Links-->
+                <!-- <span class="right social-media"> -->
+                    <span>
+                    <a href="http://facebook.com/imSriramB" target="_blank" class="tooltipped" data-position="top" data-delay="50" data-tooltip="Facebook"><i class="fa fa-facebook-square" aria-hidden="true"></i></a>&nbsp;
+                    <a href="http://twitter.com/imSriramB" target="_blank" class="tooltipped" data-position="top" data-delay="50" data-tooltip="Twitter"><i class="fa fa-twitter-square" aria-hidden="true"></i></a>&nbsp;
+                    <a href="http://github.com/sriram23" target="_blank" class="tooltipped" data-position="top" data-delay="50" data-tooltip="Github"><i class="fa fa-github-square" aria-hidden="true"></i></a>&nbsp;
+                    <a href="http://medium.com/@Sriram23" target="_blank" class="tooltipped" data-position="top" data-delay="50" data-tooltip="Medium Blogs"><i class="fa fa-medium" aria-hidden="true"></i></a>&nbsp;
+                    <a href="https://www.instagram.com/the_invincible_geek/" target="_blank" class="tooltipped" data-position="bottom" data-delay="50" data-tooltip="Instagram"><i class="fa fa-instagram" aria-hidden="true"></i></a>&nbsp;
+                    <a href="https://www.linkedin.com/in/sriram-balasubramanian-699252b7/" target="_blank" class="tooltipped" data-position="bottom" data-delay="50" data-tooltip="Linkedin"><i class="fa fa-linkedin" aria-hidden="true"></i></a>&nbsp;
+                </span>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/bundle.js"></script>
+    <script src="js/app.js"></script>
+
+</body>
+
+
+
+</html>
